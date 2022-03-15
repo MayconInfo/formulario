@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> formulários  Java Script </title>
+    <style>
+        .esconder{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="cabeçalho">
+        <h1> Cadastro escolar </h1>
+    </div>
+    <!-- onsubmit="pegarDados()" -->
+    <form>
+        <fieldset>
+            <legend> <h2> Insformações da conta </h2> </legend>
+            <p> Email: <input type="email" name="e-mail" id="e-mail"> </p>
+            <p> Senha: <input type="password" id="password" name="senha"> </p>
+        </fieldset>
+       
+        <fieldset>
+            <legend> <h2> Informações pessoais </h2> </legend>
+            <p> Nome Completo: <input type="text" id="texto" name="texto"> </p>
+            <p> Telefone: <input type="tel" name="fone" id="fone"> </p>
+            <p> Data de nascimento: <input type="date" name="data" id="data"> </p>          
+        </fieldset>
+        <p>
+        <fieldset>
+            <legend> <h2> Informações curriculares </h2> </legend>
+            <p> <label for="priFaixa"> Escola: </label>
+                <select name="PriFaixa" id="PriFaixa">
+                    <option value="EEEP Amélia Figueiredo de Lavor"> EEEP Amélia Figueiredo de Lavor </option>
+                    <option value="EEEP Lucas Emmanuel Lima Pinheiro"> EEEP Lucas Emmanuel Lima Pinheiro </option>
+                    <option value="EEMTI Liceu"> EEMTI Liceu </option>
+                    <option value="IFCE Instituto Federal"> IFCE Instituto Federal</option>
+                </select>
+            </p>
+            <p> Série: <input type="number" name="num" id="num" max="3"> </p>
+            <div> Curso: </div>
+                <label for="info"> Informática </label>
+                <input type="radio" name="seucurso" id="info" name="info"> <br>
+                <label for="adm"> Administração </label>
+                <input type="radio" name="seucurso" id="adm" name="adm"> <br>
+                <label for="enf"> Enfermagem </label>
+                <input type="radio" name="seucurso" id="enf" name="enf">
+                <label for="enf"> Nutrição </label>
+                <input type="radio" name="seucurso" id="nut" name="nut">
+                <p>
+            Matérias extracurriculares: <br>
+                <label for="pv"> Projeto de Vida </label>
+                <input type="Checkbox" id="pv" name="pv"> <br>
+                <label for="mt"> Mundo do Trabalho </label>
+                <input type="Checkbox" id="mt" name="mt"> <br>
+                <label for="eem"> Empreendedorismo </label>
+                <input type="Checkbox" id="eem" name="eem">
+                <p> Horário: <input type="time" name="time" id="time"> </p>
+                <p> Valor: <input type="range" name="range" id="range" value="0" min="0" max="100" oninput="display.value=value" onchange="display.value=value">
+                <input type="text" id="display" value="0" readonly>            
+        </fieldset>
+            <p>
+            <fieldset>
+                <legend> <h2> Número de Cadastro </h2> </legend>
+                <input type="hidden" id="oculto" name="oculto" value="9">
+            </fieldset>
+            <p>
+       
+            <p><button type="reset"> Limpar formulário </button></p>
+            <p><button type="button" onclick="pegarDados()"> Enviar respostas </button></p>
+            <p><button type="submit"> Resetar página </button></p>
+    </form>
+    <hr>
+    <div>
+        <div class="esconder"> <h3> Resumo </h3> </div>
+            <div class="resumo" id="campomail"></div>
+            <div class="resumo" id="camposenha"></div>
+            <div class="resumo" id="campotext"></div>
+            <div class="resumo" id="campotel"></div>
+            <div class="resumo" id="campodata"></div>
+            <div class="resumo" id="campoescolas"></div>
+            <div class="resumo" id="camposerie"></div>
+            <div class="resumo" id="campo_pv"></div>
+            <div class="resumo" id="campo_mt"></div>
+            <div class="resumo"id="campo_eem"></div>
+            <div class="resumo"id="campocurso"></div>
+            <div class="resumo" id="campohora"></div>
+            <div class="resumo" id="campovalor"></div>
+            <div class="resumo" id="campooculto"></div>
+    </div>
+ 
+ 
+
+<script src="script.js"></script>
+</body>
+</html>
